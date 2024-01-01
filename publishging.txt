@@ -1,0 +1,25 @@
+deploy backend on heroku
+deploy frontend on github pages or something.
+
+Explanation of Key Directories and Files
+src/controllers/: Contains controller files that handle incoming requests and return responses. Each controller focuses on a specific aspect of your application (authentication, comments, etc.).
+src/models/: Defines schemas for your database, using models for users, comments, and any other entities your application manages.
+src/routes/: Holds the route definitions for your Express application. Each file in this directory sets up routes for different features (auth, comments, etc.).
+src/services/: Contains business logic, separated from route handling. These services are called by your controllers.
+src/utils/: A place for utility functions and custom middleware.
+src/db.js: Manages the database connection, using configurations (like connection strings) stored in your .env file.
+src/app.js: Sets up your Express application (middleware, routes, etc.).
+src/server.js: The main entry point of your backend application. It initializes the server based on configurations in app.js.
+
+
+
+frontend
+
+src/components/: Contains all Svelte components, organized into subdirectories based on their functionality (authentication, comments, etc.).
+src/services/: Holds the JavaScript files responsible for making API calls. These services abstract the API logic away from the components.
+src/stores/: Utilizes Svelte stores for reactive state management, especially useful for user session data, comments, and other dynamic data.
+src/layouts/: For layout components that are common across different pages (like headers, footers, navigation bars).
+src/routes/: Contains individual Svelte components/pages and manages routing for your application.
+src/App.svelte: The root Svelte component that stitches together the layout and routing of your application.
+src/main.js: The entry point for the Svelte application. It's where your main App.svelte component is instantiated.
+public/: Holds the static files and assets for your application, including the main index.html file.
